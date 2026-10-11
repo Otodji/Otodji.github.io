@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NTLKwIEx · Théophile Otodji</title>
+<meta name="description" content="NTLKwIEx: an R package on CRAN for the 5-parameter New Topp-Leone Kumaraswamy Inverse Exponential lifetime distribution.">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="NTLKwIEx · R package by Théophile Otodji">
+<meta property="og:image" content="https://otodji.github.io/assets/img/og-image.jpg">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"><div class="grid"></div><div class="blob b1"></div><div class="blob b2" style="background:#2563eb"></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="logo-mark">TO</span>Théophile Otodji</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#publications">Publications</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../index.html#contact">Let's talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="crumb" href="../index.html#projects">← All projects</a>
+    <div class="reveal">
+      <span class="kicker" style="--k:#22d3ee">R package · published on CRAN</span>
+      <h1><span class="grad-text">NTLKwIEx</span></h1>
+      <p class="summary">Statistical tools for the <strong>New Topp-Leone Kumaraswamy Inverse Exponential</strong>
+        distribution: a flexible five-parameter model for lifetime and reliability data.</p>
+      <div class="tags"><span class="tag" style="--tc:#22d3ee">lifetime data</span><span class="tag" style="--tc:#60a5fa">reliability</span><span class="tag" style="--tc:#a78bfa">maximum likelihood</span><span class="tag" style="--tc:#f472b6">ggplot2</span><span class="tag" style="--tc:#34d399">vignette</span></div>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://CRAN.R-project.org/package=NTLKwIEx" target="_blank" rel="noopener">View on CRAN ↗</a>
+        <a class="btn" href="https://github.com/Otodji/NTLKwIEx" target="_blank" rel="noopener">Source code on GitHub ↗</a>
+        <a class="btn" href="https://doi.org/10.1063/5.0179458" target="_blank" rel="noopener">Read the paper ↗</a>
+      </div>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><span>Role</span><b>Author & maintainer</b></div>
+      <div class="fact"><span>Current version</span><b>0.2.0 · CRAN 2026</b></div>
+      <div class="fact"><span>Stack</span><b>R · dplyr · ggplot2</b></div>
+      <div class="fact"><span>Paper</span><b>AIP Advances, 2024</b></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">The problem</span>
+    <h2>Modelling lifetimes and inequality</h2>
+    <div class="prose">
+      <p>Lifetime data, such as the time before a component fails, are often right-skewed with heavy tails. The
+        <strong>NTLKwIEx distribution</strong> combines the Topp-Leone, Kumaraswamy and inverse exponential constructions to
+        cover a wide range of shapes with only five parameters.</p>
+      <p>The model was introduced in <em>AIP Advances</em> (2024), together with <strong>inequality measures</strong> and
+        applications to socio-economic development indicators. The package makes all of it reproducible in R.</p>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#3b82f6">The model</span>
+    <h2>Distribution function</h2>
+    <p>With \(K(x) = e^{-\theta / x}\) for \(x > 0\) and \(\theta, \alpha, a, b, m > 0\):</p>
+    <div class="math" style="--c1:#22d3ee">
+      $$F(x;\theta,\alpha,a,b,m) = \Big[\,1-\big(1-K(x)^{\,a\,\alpha^{K(x)}}\big)^{2b}\Big]^{m}$$
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#f59e0b">Try it</span>
+    <h2>Interactive density explorer</h2>
+    <p>Move the sliders to reshape the distribution. Quantiles are computed numerically, exactly like
+      <code>Q_NTLKwIEx</code> does. With the default parameters, the median is <strong>1.991</strong>, the value
+      printed in the package documentation.</p>
+    <div class="explorer gcard" id="ex-ntlk" style="--c1:#22d3ee; --c2:#3b82f6; margin-top: 22px">
+      <div class="controls"><h3>Parameters</h3></div>
+      <div class="plot">
+        <div class="legend"><span><i style="background:#22d3ee"></i>density f(x)</span><span><i style="background:#818cf8"></i>CDF F(x), right axis</span><span><i style="background:#f59e0b"></i>median</span><span><i style="background:#10b981"></i>mode</span></div>
+        <div class="readout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#10b981">What's inside</span>
+    <h2>Package API</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Function</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>P_NTLKwIEx(x, teta, alpha, a, b, m)</code></td><td>Probability density function</td></tr>
+          <tr><td><code>C_NTLKwIEx(x, teta, alpha, a, b, m)</code></td><td>Cumulative distribution function</td></tr>
+          <tr><td><code>Q_NTLKwIEx(p, teta, alpha, a, b, m)</code></td><td>Quantile for a probability <code>p</code></td></tr>
+          <tr><td><code>R_NTLKwIEx(n, teta, alpha, a, b, m)</code></td><td>Random sample of size <code>n</code></td></tr>
+          <tr><td><code>E_NTLKwIEx(data)</code></td><td>Maximum-likelihood estimation of the five parameters</td></tr>
+          <tr><td><code>Sim_NTLKwIEx(data)</code></td><td>Histogram of the data with the fitted density overlaid</td></tr>
+          <tr><td><code>Plot_PNTLKwIEx(...)</code> / <code>Plot_CNTLKwIEx(...)</code></td><td>Density and distribution function plots</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Ships with the <code>ConductorFailureTimes</code> dataset (failure times, in hours, of 59 conductors from an accelerated life test) and a vignette.</p>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">Quick start</span>
+    <h2>From install to fitted model</h2>
+<pre class="code" data-lang="R"><span class="f">install.packages</span>(<span class="s">"NTLKwIEx"</span>)
+<span class="k">library</span>(NTLKwIEx)
+
+<span class="c"># Density, cumulative probability and median</span>
+<span class="f">P_NTLKwIEx</span>(<span class="n">2</span>, teta = <span class="n">2</span>, alpha = <span class="n">0.5</span>, a = <span class="n">1</span>, b = <span class="n">1</span>, m = <span class="n">2</span>)   <span class="c">#> 0.3427294</span>
+<span class="f">C_NTLKwIEx</span>(<span class="n">2</span>, teta = <span class="n">2</span>, alpha = <span class="n">0.5</span>, a = <span class="n">1</span>, b = <span class="n">1</span>, m = <span class="n">2</span>)   <span class="c">#> 0.5029632</span>
+<span class="f">Q_NTLKwIEx</span>(<span class="n">0.5</span>, teta = <span class="n">2</span>, alpha = <span class="n">0.5</span>, a = <span class="n">1</span>, b = <span class="n">1</span>, m = <span class="n">2</span>) <span class="c">#> 1.99138</span>
+
+<span class="c"># Fit the model to conductor failure times</span>
+<span class="f">data</span>(ConductorFailureTimes)
+<span class="f">E_NTLKwIEx</span>(ConductorFailureTimes)
+<span class="f">Sim_NTLKwIEx</span>(ConductorFailureTimes)</pre>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap next-proj reveal">
+    <a class="gcard" href="ptlenkies.html" style="--c1:#8b5cf6; --c2:#ec4899"><span>← Previous project</span><b>PTLENKies</b></a>
+    <a class="gcard r" href="machine-learning.html" style="--c1:#f59e0b; --c2:#ec4899"><span>Next project →</span><b>Supervised Machine Learning</b></a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© <span class="year-now">2026</span> Théophile Otodji</span><span><a href="../index.html">Home</a> · <a href="https://github.com/Otodji" target="_blank" rel="noopener">GitHub</a></span></div></footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/explorer.js"></script>
+<script>
+  // NTLKwIEx distribution function (no closed-form quantile: the explorer uses bisection)
+  const cdf = (x, q) => {
+    const K = Math.exp(-q.teta / x);
+    return Math.pow(1 - Math.pow(1 - Math.pow(K, q.a * Math.pow(q.alpha, K)), 2 * q.b), q.m);
+  };
+  Explorer(document.getElementById("ex-ntlk"), {
+    cdf, color: "#22d3ee", color2: "#818cf8", simulate: { n: 500 },
+    params: [
+      { key: "teta", label: "θ (theta)", min: 0.2, max: 8, step: 0.1, value: 2 },
+      { key: "alpha", label: "α (alpha)", min: 0.1, max: 3, step: 0.05, value: 0.5 },
+      { key: "a", label: "a", min: 0.2, max: 5, step: 0.1, value: 1 },
+      { key: "b", label: "b", min: 0.2, max: 5, step: 0.1, value: 1 },
+      { key: "m", label: "m", min: 0.2, max: 5, step: 0.1, value: 2 }
+    ]
+  });
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]})"></script>
+</body>
+</html>

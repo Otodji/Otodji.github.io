@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Théophile Otodji · Data Science & Statistics</title>
+<meta name="description" content="Théophile Otodji: data scientist and statistician. MSc Data Science (Finance) at Université Paris-Saclay, author of 2 CRAN packages and 6 peer-reviewed articles in probability distribution theory.">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="Théophile Otodji · Data Science & Statistics">
+<meta property="og:description" content="Data science, machine learning and probability distribution theory. 2 CRAN packages, 6 peer-reviewed articles.">
+<meta property="og:image" content="https://otodji.github.io/assets/img/og-image.jpg">
+<meta property="og:url" content="https://otodji.github.io/">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="bg-fx" aria-hidden="true"><div class="grid"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="logo-mark">TO</span>Théophile Otodji</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" href="#contact">Let's talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="status"><span class="dot"></span>Open to data science & quant opportunities</span>
+        <h1>Théophile <span class="grad-text">Otodji</span></h1>
+        <p class="roles"><span class="prompt">~$</span> <span class="typed" data-roles='["Data Scientist","Statistician","R package author","Machine Learning practitioner","Researcher in distribution theory"]'></span><span class="caret"></span></p>
+        <p class="intro">MSc Data Science (Finance track) at <strong>Université Paris-Saclay</strong> and engineer in
+          statistics & finance. I build <strong>new probability models</strong>, ship them as
+          <strong>open-source R packages</strong>, and turn data into decisions in industry.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#projects">Explore my projects
+            <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6L13 5z"/></svg></a>
+          <a class="btn" href="cv.pdf" download data-cv hidden>
+            <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>Download CV (FR)</a>
+          <a class="btn" href="#publications">Read my research</a>
+        </div>
+        <div class="socials">
+          <a class="social" href="https://github.com/Otodji" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+          <a class="social" href="https://www.linkedin.com/in/th%C3%A9ophile-otodji-3abba8293" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a class="social" href="https://orcid.org/0009-0003-0389-9007" target="_blank" rel="noopener" aria-label="ORCID"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 100 24 12 12 0 000-24zM7.37 18.13H5.92V8.06h1.45v10.07zM6.64 6.83a.95.95 0 110-1.9.95.95 0 010 1.9zm11.52 6.21c0 2.84-1.79 5.09-5.18 5.09H9.12V8.06h3.86c3.47 0 5.18 2.4 5.18 4.98zm-1.48 0c0-1.92-1.03-3.65-3.62-3.65h-2.49v7.33h2.4c2.57 0 3.71-1.71 3.71-3.68z"/></svg></a>
+          <a class="social" href="mailto:otodjitheodule@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="portrait">
+        <div class="glow"></div>
+        <div class="ring"></div>
+        <img src="assets/img/portrait.jpg" alt="Portrait of Théophile Otodji" width="340" height="340">
+        <div class="float-chip c1"><i>📦</i>2 R packages on CRAN</div>
+        <div class="float-chip c2"><i>🏆</i>Best Technological Innovation</div>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat" style="--c: var(--cyan)"><b data-count="6">6</b><span>peer-reviewed articles</span></div>
+      <div class="stat" style="--c: var(--violet)"><b data-count="2">2</b><span>R packages published on CRAN</span></div>
+      <div class="stat" style="--c: var(--pink)"><b data-count="3" data-prefix="~" data-suffix=" yrs">~3 yrs</b><span>industry experience in data</span></div>
+      <div class="stat" style="--c: var(--amber)"><b data-count="2">2</b><span>innovation awards</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" style="--k: var(--cyan)">01 · About me</span>
+      <h2>Statistics at the core, <span class="grad-text">data science</span> in practice.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I am an <strong>engineer in statistics and finance</strong>, currently completing a
+          <strong>Master 2 in Data Science (Finance track) at Université Paris-Saclay</strong>, with about
+          three years of experience in data analysis and business intelligence in industry.</p>
+        <p>My research is in <strong>probability distribution theory</strong>: building new families of
+          distributions, studying their properties, and applying them to data in finance, actuarial science,
+          engineering and socio-economic development. I turn this research into <strong>open-source software</strong>
+          used by other statisticians.</p>
+        <p>In industry, I reported directly to a CEO, built anomaly-detection algorithms and management tools,
+          and delivered measurable results: <strong>+25% revenue</strong> on a product line and
+          <strong>−30% receivables</strong>.</p>
+      </div>
+      <div class="focus reveal">
+        <div class="focus-item" style="--c: var(--cyan)"><span class="ic">∑</span><div><h3>Statistical modelling</h3><p>New distribution families, inference, maximum likelihood, goodness of fit.</p></div></div>
+        <div class="focus-item" style="--c: var(--violet)"><span class="ic">◆</span><div><h3>Machine learning</h3><p>Supervised learning, ensembles, deep learning with PyTorch and Keras.</p></div></div>
+        <div class="focus-item" style="--c: var(--pink)"><span class="ic">₣</span><div><h3>Finance & risk</h3><p>Actuarial and financial data, receivables, forecasting, KPI reporting.</p></div></div>
+        <div class="focus-item" style="--c: var(--amber)"><span class="ic">⌘</span><div><h3>Open-source software</h3><p>Documented, tested R packages published on CRAN.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" style="--k: var(--violet)">02 · Selected work</span>
+      <h2>Projects & case studies</h2>
+      <p>Each project has its own page with the method, the results and the code. Click a card to read the case study.</p>
+    </div>
+
+    <div class="filters reveal" role="group" aria-label="Filter projects">
+      <button class="filter on" data-filter="all">All</button>
+      <button class="filter" data-filter="r">R packages</button>
+      <button class="filter" data-filter="ml">Machine learning</button>
+      <button class="filter" data-filter="stats">Statistics</button>
+      <button class="filter" data-filter="industry">Industry</button>
+    </div>
+
+    <div class="projects">
+      <!-- PTLENKies -->
+      <article class="project gcard reveal" data-cat="r stats" style="--c1:#8b5cf6; --c2:#ec4899">
+        <div class="cover">
+          <svg class="art" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 140 C 80 140, 110 20, 160 20 S 230 120, 400 135" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.5"/>
+            <path d="M0 140 C 90 140, 140 60, 190 55 S 280 120, 400 138" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="5 5"/>
+          </svg>
+          <span class="emoji">📦</span><span class="lang">R · CRAN</span>
+        </div>
+        <div class="body">
+          <h3><a class="stretched" href="projects/ptlenkies.html">PTLENKies</a></h3>
+          <p>R package for a flexible 7-parameter distribution on a Burr XII baseline: density, quantiles,
+            simulation, maximum-likelihood fitting and plots.</p>
+          <p class="award">🏆 Best Technological Innovation Award, UNSTIM</p>
+          <div class="tags"><span class="tag" style="--tc:#a78bfa">distribution theory</span><span class="tag" style="--tc:#f472b6">MLE</span><span class="tag" style="--tc:#22d3ee">CRAN</span></div>
+          <div class="foot">
+            <span class="more">Case study <span class="arr">→</span></span>
+            <span class="ext"><a class="icon-btn" href="https://github.com/Otodji/PTLENKies" target="_blank" rel="noopener" aria-label="PTLENKies on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- NTLKwIEx -->
+      <article class="project gcard reveal" data-cat="r stats" style="--c1:#22d3ee; --c2:#3b82f6">
+        <div class="cover">
+          <svg class="art" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 140 C 40 140, 70 30, 110 30 S 220 110, 400 130" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.5"/>
+            <path d="M0 140 L 400 140" stroke="#fff" stroke-opacity=".2"/>
+            <g fill="#fff" fill-opacity=".25"><rect x="60" y="80" width="22" height="60"/><rect x="86" y="45" width="22" height="95"/><rect x="112" y="38" width="22" height="102"/><rect x="138" y="60" width="22" height="80"/><rect x="164" y="85" width="22" height="55"/><rect x="190" y="102" width="22" height="38"/></g>
+          </svg>
+          <span class="emoji">📈</span><span class="lang">R · CRAN</span>
+        </div>
+        <div class="body">
+          <h3><a class="stretched" href="projects/ntlkwiex.html">NTLKwIEx</a></h3>
+          <p>R package for a 5-parameter lifetime distribution, introduced with inequality measures for
+            socio-economic development indicators (<em>AIP Advances</em>, 2024).</p>
+          <div class="tags"><span class="tag" style="--tc:#22d3ee">lifetime data</span><span class="tag" style="--tc:#60a5fa">reliability</span><span class="tag" style="--tc:#a78bfa">CRAN</span></div>
+          <div class="foot">
+            <span class="more">Case study <span class="arr">→</span></span>
+            <span class="ext"><a class="icon-btn" href="https://github.com/Otodji/NTLKwIEx" target="_blank" rel="noopener" aria-label="NTLKwIEx on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Machine learning -->
+      <article class="project gcard reveal" data-cat="ml" style="--c1:#f59e0b; --c2:#ec4899">
+        <div class="cover">
+          <svg class="art" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 30 L 400 125" stroke="#fff" stroke-opacity=".7" stroke-width="2.5"/>
+            <g fill="#fff" fill-opacity=".55"><circle cx="40" cy="110" r="4"/><circle cx="80" cy="125" r="4"/><circle cx="120" cy="100" r="4"/><circle cx="70" cy="90" r="4"/><circle cx="160" cy="118" r="4"/><circle cx="210" cy="132" r="4"/><circle cx="30" cy="70" r="4"/></g>
+            <g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2"><circle cx="230" cy="40" r="4"/><circle cx="280" cy="60" r="4"/><circle cx="320" cy="30" r="4"/><circle cx="360" cy="70" r="4"/><circle cx="260" cy="20" r="4"/><circle cx="190" cy="25" r="4"/><circle cx="350" cy="100" r="4"/></g>
+          </svg>
+          <span class="emoji">🧠</span><span class="lang">Python</span>
+        </div>
+        <div class="body">
+          <h3><a class="stretched" href="projects/machine-learning.html">Supervised Machine Learning</a></h3>
+          <p>End-to-end supervised learning on real data: from Bayes rule and bias-variance to random forests,
+            boosting, <strong>algorithmic fairness</strong> and ROC / precision-recall evaluation.</p>
+          <div class="tags"><span class="tag" style="--tc:#fbbf24">scikit-learn</span><span class="tag" style="--tc:#f472b6">fairness</span><span class="tag" style="--tc:#34d399">ensembles</span></div>
+          <div class="foot">
+            <span class="more">Case study <span class="arr">→</span></span>
+            <span class="ext"><a class="icon-btn" href="https://github.com/Otodji/TP_Machine_Learning" target="_blank" rel="noopener" aria-label="Machine learning project on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Deep learning -->
+      <article class="project gcard reveal" data-cat="ml" style="--c1:#ec4899; --c2:#8b5cf6">
+        <div class="cover">
+          <svg class="art" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+            <g stroke="#fff" stroke-opacity=".22" stroke-width="1.2">
+              <path d="M100 35L200 25M100 35L200 75M100 35L200 125M100 75L200 25M100 75L200 75M100 75L200 125M100 115L200 25M100 115L200 75M100 115L200 125M200 25L300 50M200 75L300 50M200 125L300 50M200 25L300 100M200 75L300 100M200 125L300 100"/>
+            </g>
+            <g fill="#fff" fill-opacity=".85"><circle cx="100" cy="35" r="7"/><circle cx="100" cy="75" r="7"/><circle cx="100" cy="115" r="7"/><circle cx="200" cy="25" r="7"/><circle cx="200" cy="75" r="7"/><circle cx="200" cy="125" r="7"/><circle cx="300" cy="50" r="7"/><circle cx="300" cy="100" r="7"/></g>
+          </svg>
+          <span class="emoji">⚡</span><span class="lang">Python</span>
+        </div>
+        <div class="body">
+          <h3><a class="stretched" href="projects/deep-learning.html">Deep Learning Toolbox</a></h3>
+          <p>Computational graphs and backpropagation implemented side by side in NumPy, PyTorch,
+            TensorFlow and Keras, up to a full FashionMNIST classifier.</p>
+          <div class="tags"><span class="tag" style="--tc:#f472b6">PyTorch</span><span class="tag" style="--tc:#fbbf24">TensorFlow</span><span class="tag" style="--tc:#a78bfa">Keras</span></div>
+          <div class="foot">
+            <span class="more">Case study <span class="arr">→</span></span>
+            <span class="ext"><a class="icon-btn" href="https://github.com/Otodji/tp-deep-learning" target="_blank" rel="noopener" aria-label="Deep learning project on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Monte-Carlo -->
+      <article class="project gcard reveal" data-cat="stats" style="--c1:#10b981; --c2:#22d3ee">
+        <div class="cover">
+          <svg class="art" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+            <g fill="#fff" fill-opacity=".28"><rect x="110" y="118" width="18" height="22"/><rect x="132" y="92" width="18" height="48"/><rect x="154" y="55" width="18" height="85"/><rect x="176" y="30" width="18" height="110"/><rect x="198" y="38" width="18" height="102"/><rect x="220" y="66" width="18" height="74"/><rect x="242" y="98" width="18" height="42"/><rect x="264" y="120" width="18" height="20"/></g>
+            <path d="M60 140 C 140 138, 160 25, 190 25 S 250 130, 340 140" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="2.5"/>
+          </svg>
+          <span class="emoji">🎲</span><span class="lang">Python</span>
+        </div>
+        <div class="body">
+          <h3><a class="stretched" href="projects/monte-carlo-burr.html">Monte-Carlo · Burr-PTLEN</a></h3>
+          <p>Simulation, maximum-likelihood estimation and goodness-of-fit testing with a
+            <strong>parametric bootstrap</strong>, ported from R to Python with a closed-form quantile.</p>
+          <div class="tags"><span class="tag" style="--tc:#34d399">SciPy</span><span class="tag" style="--tc:#22d3ee">bootstrap</span><span class="tag" style="--tc:#a78bfa">GoF tests</span></div>
+          <div class="foot">
+            <span class="more">Case study <span class="arr">→</span></span>
+            <span class="ext"><a class="icon-btn" href="https://github.com/Otodji/Simulation_Monte_Carlo_PTLENKies" target="_blank" rel="noopener" aria-label="Monte-Carlo project on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Industry -->
+      <article class="project gcard reveal" data-cat="industry" style="--c1:#f59e0b; --c2:#10b981">
+        <div class="cover">
+          <svg class="art" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 120 L 60 110 L 110 115 L 160 90 L 210 95 L 260 60 L 300 70 L 350 35 L 400 30" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="2.5"/>
+            <circle cx="210" cy="95" r="9" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2"/>
+            <path d="M0 120 L 60 110 L 110 115 L 160 90 L 210 95 L 260 60 L 300 70 L 350 35 L 400 30 L 400 150 L 0 150Z" fill="#fff" fill-opacity=".08"/>
+          </svg>
+          <span class="emoji">⚙️</span><span class="lang">Industry</span>
+        </div>
+        <div class="body">
+          <h3>ARESS data & management tools</h3>
+          <p>Energy-fraud anomaly detection and 12 management tools (ARESS OPTIMA, ARESSDataTools, Dispatching
+            Tools…) built for ARESS SAS and used across all departments.</p>
+          <div class="tags"><span class="tag" style="--tc:#fbbf24">anomaly detection</span><span class="tag" style="--tc:#34d399">BI</span><span class="tag" style="--tc:#22d3ee">forecasting</span></div>
+          <div class="foot"><a class="more" href="#experience" style="position:relative; z-index:2">See the impact <span class="arr">→</span></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" style="--k: var(--pink)">03 · Experience</span>
+      <h2>Where I've made an impact</h2>
+    </div>
+    <div class="timeline">
+      <div class="job gcard reveal" style="--c1:#22d3ee; --c2:#8b5cf6">
+        <div class="job-head"><h3>Data Intelligence & Optimisation Officer</h3><span class="when">05/2025 – 09/2026</span></div>
+        <p class="org">ARESS SAS · Cotonou, Benin & France</p>
+        <ul>
+          <li>Reported directly to the CEO: anomaly-detection algorithms for energy fraud and 12 management tools, improved iteratively from user feedback.</li>
+          <li>Business intelligence, evaluation of technical offers and monthly KPI reporting.</li>
+        </ul>
+        <div class="kpis">
+          <span class="kpi"><b style="--kc:#34d399">+25%</b> revenue on self-consumption offers</span>
+          <span class="kpi"><b style="--kc:#22d3ee">−23%</b> receivables (Q1 2026)</span>
+          <span class="kpi"><b style="--kc:#a78bfa">100%</b> monitoring coverage</span>
+        </div>
+      </div>
+      <div class="job gcard reveal" style="--c1:#8b5cf6; --c2:#ec4899">
+        <div class="job-head"><h3>Lecturer</h3><span class="when">05/2026 – 06/2026</span></div>
+        <p class="org">African School of Economics · Cotonou, Benin</p>
+        <ul>
+          <li>Designed and taught 25 h of Probability and 25 h of Sampling Theory to first-year students in Economic Statistics and Computer Science & Statistics.</li>
+        </ul>
+        <div class="kpis">
+          <span class="kpi"><b style="--kc:#34d399">100%</b> of students ≥ 12/20</span>
+          <span class="kpi"><b style="--kc:#f472b6">72%</b> ≥ 15/20</span>
+        </div>
+      </div>
+      <div class="job gcard reveal" style="--c1:#ec4899; --c2:#f59e0b">
+        <div class="job-head"><h3>Data Analyst</h3><span class="when">02/2024 – 05/2025</span></div>
+        <p class="org">ARESS SAS · Cotonou, Benin & France</p>
+        <ul>
+          <li>Built a field data collection tool (Kobo Collect) and sales-trend forecasting models.</li>
+          <li>Analysis of unpaid receivables, the Pay-As-You-Go model and customer satisfaction (CSAT / NPS).</li>
+        </ul>
+        <div class="kpis">
+          <span class="kpi"><b style="--kc:#22d3ee">−30%</b> receivables in 2025</span>
+          <span class="kpi"><b style="--kc:#fbbf24">3 days/week</b> saved on KPI computation</span>
+          <span class="kpi"><b style="--kc:#34d399">+20%</b> call-centre productivity</span>
+        </div>
+      </div>
+      <div class="job gcard reveal" style="--c1:#f59e0b; --c2:#10b981">
+        <div class="job-head"><h3>Research internships</h3><span class="when">2022 – 2023</span></div>
+        <p class="org">UNESCO Chair (ICMPA) & MIFY · Abomey-Calavi, Benin</p>
+        <ul>
+          <li>Statistical distribution theory, machine learning and deep learning; advanced training in R, Python and Mathematica.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" style="--k: var(--amber)">04 · Research</span>
+      <h2>Peer-reviewed publications</h2>
+      <p>New families of probability distributions, their properties, and applications to finance, insurance,
+        engineering and socio-economic data.</p>
+    </div>
+    <div class="pubs">
+      <article class="pub gcard reveal" style="--c1:#22d3ee; --c2:#8b5cf6">
+        <div class="pub-top"><span class="year-chip">2026</span><span class="journal">La Matematica</span></div>
+        <h3>T-X Arctan Log-Logistic Odd family of distributions: properties and applications to materials and composite engineering data</h3>
+        <p class="authors">Atchadé, M. N., <b>Otodji, T.</b>, & Bogninou, M. J. · 5(3), 59</p>
+        <div class="links"><a href="https://doi.org/10.1007/s44007-026-00241-w" target="_blank" rel="noopener">Read the paper ↗</a></div>
+      </article>
+      <article class="pub gcard reveal" style="--c1:#8b5cf6; --c2:#ec4899">
+        <div class="pub-top"><span class="year-chip">2026</span><span class="journal">Annals of Data Science</span></div>
+        <h3>Modeling Economics and Finance Data with the Arctan Marshall-Olkin Weibull Distribution</h3>
+        <p class="authors">Atchadé, M. N., Kossou, E. Z., <b>Otodji, T.</b>, Bogninou, M. J., & Djibril, A. M. · 13, 1103–1136</p>
+        <div class="links"><a href="https://doi.org/10.1007/s40745-025-00610-2" target="_blank" rel="noopener">Read the paper ↗</a></div>
+      </article>
+      <article class="pub gcard reveal" style="--c1:#ec4899; --c2:#f59e0b">
+        <div class="pub-top"><span class="year-chip">2025</span><span class="journal">European Journal of Statistics</span></div>
+        <h3>The Generalized Unit Weibull Distribution: Properties, Estimation, and Applications in Actuarial Science and Insurance</h3>
+        <p class="authors">Atchadé, M. N., Zoffoun, G. B., Bogninou, M. J., <b>Otodji, T.</b>, & Djibril, A. M. · 5, 11</p>
+        <div class="links"><a href="https://doi.org/10.28924/ada/stat.5.11" target="_blank" rel="noopener">Read the paper ↗</a></div>
+      </article>
+      <article class="pub gcard reveal" style="--c1:#f59e0b; --c2:#10b981">
+        <div class="pub-top"><span class="year-chip">2025</span><span class="journal">Comput. J. Math. Stat. Sci.</span></div>
+        <h3>A New Shifted Lomax-X Family of Distributions: Properties and Applications to Actuarial and Financial Data</h3>
+        <p class="authors">Atchadé, M. N., Agbahide, A. A., <b>Otodji, T.</b>, Bogninou, M. J., & Djibril, A. M. · 4(1), 41–71</p>
+        <div class="links"><a href="https://doi.org/10.21608/cjmss.2024.307114.1066" target="_blank" rel="noopener">Read the paper ↗</a></div>
+      </article>
+      <article class="pub gcard reveal" style="--c1:#10b981; --c2:#22d3ee">
+        <div class="pub-top"><span class="year-chip">2024</span><span class="journal">AIP Advances</span></div>
+        <h3>A novel family of distributions: Properties, inequality measures and applications to socio-economic development indicators</h3>
+        <p class="authors">Atchadé, M. N., <b>Otodji, T.</b>, & Djibril, A. M. · 14(1), 015106</p>
+        <div class="links"><a href="https://doi.org/10.1063/5.0179458" target="_blank" rel="noopener">Read the paper ↗</a><a href="projects/ntlkwiex.html">R package: NTLKwIEx →</a></div>
+      </article>
+      <article class="pub gcard reveal" style="--c1:#3b82f6; --c2:#8b5cf6">
+        <div class="pub-top"><span class="year-chip">2023</span><span class="journal">Open Physics</span></div>
+        <h3>Power Topp–Leone exponential negative family of distributions with numerical illustrations to engineering and biological data</h3>
+        <p class="authors">Atchadé, M. N., <b>Otodji, T.</b>, Djibril, A. M., & N'bouké, M. · 21(1), 20230151</p>
+        <div class="links"><a href="https://doi.org/10.1515/phys-2023-0151" target="_blank" rel="noopener">Read the paper ↗</a><a href="projects/ptlenkies.html">R package: PTLENKies →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" style="--k: var(--emerald)">05 · Education & recognition</span>
+      <h2>Background</h2>
+    </div>
+    <div class="edu">
+      <div class="gcard reveal" style="--c1:#22d3ee; --c2:#8b5cf6"><span class="when">ongoing</span><h3>MSc Data Science, Finance track</h3><p>Université Paris-Saclay, France</p></div>
+      <div class="gcard reveal" style="--c1:#8b5cf6; --c2:#ec4899"><span class="when">2024 – 2025</span><h3>MSc Statistics Applied to Life Sciences</h3><p>International Chair in Mathematical Physics and Applications (CIPMA), Benin</p></div>
+      <div class="gcard reveal" style="--c1:#ec4899; --c2:#f59e0b"><span class="when">2020 – 2023</span><h3>Engineering degree, Statistics & Finance</h3><p>National School of Mathematical Engineering and Modelling (ENSGMM), Benin</p></div>
+      <div class="gcard reveal" style="--c1:#f59e0b; --c2:#10b981"><span class="when">2018 – 2020</span><h3>Preparatory classes for engineering schools</h3><p>National Institute of Preparatory Classes, Benin</p></div>
+    </div>
+    <div class="split">
+      <div class="panel gcard reveal" style="--c1:#f59e0b; --c2:#ec4899">
+        <h3>🏆 Awards & distinctions</h3>
+        <ul class="list">
+          <li data-i="◆"><b>Best Technological Innovation Award</b>, UNSTIM, Benin, for the PTLENKies package</li>
+          <li data-i="◆"><b>Best Innovative Project Award</b>, CEA-SMIA / IMSP, Dangbo, Benin</li>
+          <li data-i="◆"><b>Africa TechUp Tour 2025 fellow</b>, 54Bridges & ISHEERO, selected among 1,000 fellows</li>
+          <li data-i="◆">Public speaking certificate, EuroCham, Cotonou (2025)</li>
+        </ul>
+      </div>
+      <div class="panel gcard reveal" style="--c1:#22d3ee; --c2:#8b5cf6">
+        <h3>🎤 Conferences & training</h3>
+        <ul class="list">
+          <li data-i="◆"><b>Bernoulli–IMS 11th World Congress in Probability and Statistics</b>, Ruhr University Bochum, Germany (2024)</li>
+          <li data-i="◆">Research seminar on a new family of distributions, CIPMA, University of Abomey-Calavi (2025)</li>
+          <li data-i="◆">WAEMU researchers' capacity-building programme, BCEAO / COFEB (2025)</li>
+          <li data-i="◆">Masterclass on AI and banking cybersecurity, BCEAO–COFEB / HEC Paris (2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" style="--k: var(--blue)">06 · Toolbox</span>
+      <h2>Skills & technologies</h2>
+    </div>
+    <div class="skills">
+      <div class="skill gcard reveal" style="--c1:#22d3ee; --c2:#3b82f6"><div class="skill-head"><span class="ic">∑</span><h3>Statistics</h3></div>
+        <div class="tags"><span class="tag" style="--tc:#22d3ee">statistical inference</span><span class="tag" style="--tc:#22d3ee">maximum likelihood</span><span class="tag" style="--tc:#22d3ee">model selection</span><span class="tag" style="--tc:#22d3ee">distribution theory</span><span class="tag" style="--tc:#22d3ee">Monte-Carlo</span><span class="tag" style="--tc:#22d3ee">bootstrap</span></div></div>
+      <div class="skill gcard reveal" style="--c1:#8b5cf6; --c2:#ec4899"><div class="skill-head"><span class="ic">🧠</span><h3>Machine learning & AI</h3></div>
+        <div class="tags"><span class="tag" style="--tc:#a78bfa">supervised learning</span><span class="tag" style="--tc:#a78bfa">ensembles</span><span class="tag" style="--tc:#a78bfa">deep learning</span><span class="tag" style="--tc:#a78bfa">computer vision</span><span class="tag" style="--tc:#a78bfa">NLP</span><span class="tag" style="--tc:#a78bfa">anomaly detection</span></div></div>
+      <div class="skill gcard reveal" style="--c1:#ec4899; --c2:#f59e0b"><div class="skill-head"><span class="ic">⌨️</span><h3>Programming</h3></div>
+        <div class="tags"><span class="tag" style="--tc:#f472b6">Python</span><span class="tag" style="--tc:#f472b6">R</span><span class="tag" style="--tc:#f472b6">SQL</span><span class="tag" style="--tc:#f472b6">C</span><span class="tag" style="--tc:#f472b6">MATLAB</span><span class="tag" style="--tc:#f472b6">Mathematica</span><span class="tag" style="--tc:#f472b6">LaTeX</span></div></div>
+      <div class="skill gcard reveal" style="--c1:#f59e0b; --c2:#10b981"><div class="skill-head"><span class="ic">📚</span><h3>Libraries & frameworks</h3></div>
+        <div class="tags"><span class="tag" style="--tc:#fbbf24">scikit-learn</span><span class="tag" style="--tc:#fbbf24">PyTorch</span><span class="tag" style="--tc:#fbbf24">TensorFlow / Keras</span><span class="tag" style="--tc:#fbbf24">pandas</span><span class="tag" style="--tc:#fbbf24">NumPy / SciPy</span><span class="tag" style="--tc:#fbbf24">ggplot2 / dplyr</span></div></div>
+      <div class="skill gcard reveal" style="--c1:#10b981; --c2:#22d3ee"><div class="skill-head"><span class="ic">📊</span><h3>Data platforms & BI</h3></div>
+        <div class="tags"><span class="tag" style="--tc:#34d399">Databricks</span><span class="tag" style="--tc:#34d399">Power BI</span><span class="tag" style="--tc:#34d399">Tableau</span><span class="tag" style="--tc:#34d399">Grafana</span><span class="tag" style="--tc:#34d399">QGIS</span><span class="tag" style="--tc:#34d399">Kobo Collect</span><span class="tag" style="--tc:#34d399">STATA / SPSS</span></div></div>
+      <div class="skill gcard reveal" style="--c1:#3b82f6; --c2:#8b5cf6"><div class="skill-head"><span class="ic">🌍</span><h3>Languages</h3></div>
+        <div class="tags"><span class="tag" style="--tc:#60a5fa">French · native</span><span class="tag" style="--tc:#60a5fa">English · intermediate</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <span class="kicker" style="--k: var(--pink)">07 · Contact</span>
+      <h2 style="margin-top: 14px">Let's build something<br><span class="grad-text">with data</span>.</h2>
+      <p>I'm open to opportunities in data science, quantitative finance and statistical research.
+        The fastest way to reach me is by email or on LinkedIn.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="mailto:otodjitheodule@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>otodjitheodule@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/th%C3%A9ophile-otodji-3abba8293" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/Otodji" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="cv.pdf" download data-cv hidden>Download CV (FR)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span class="year-now">2026</span> Théophile Otodji · Paris area, France</span>
+    <span><a href="https://github.com/Otodji" target="_blank" rel="noopener">GitHub</a> · <a href="https://orcid.org/0009-0003-0389-9007" target="_blank" rel="noopener">ORCID</a> · <a href="#top">Back to top ↑</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supervised Machine Learning · Théophile Otodji</title>
+<meta name="description" content="A complete supervised machine learning study in Python and scikit-learn on real data: Bayes rule, bias-variance, LDA/QDA, k-NN, CART, random forests, boosting, algorithmic fairness and ROC evaluation.">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="Supervised Machine Learning · Théophile Otodji">
+<meta property="og:image" content="https://otodji.github.io/assets/img/ml/decision-boundaries.png">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"><div class="grid"></div><div class="blob b1" style="background:#d97706"></div><div class="blob b2" style="background:#db2777"></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="logo-mark">TO</span>Théophile Otodji</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#publications">Publications</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../index.html#contact">Let's talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="crumb" href="../index.html#projects">← All projects</a>
+    <div class="reveal">
+      <span class="kicker" style="--k:#fbbf24">Machine learning · MSc Data Science, Université Paris-Saclay</span>
+      <h1>Supervised <span class="grad-text">Machine Learning</span></h1>
+      <p class="summary">A complete supervised-learning study on two real datasets, from the theory of the Bayes classifier
+        to ensemble methods, <strong>algorithmic fairness</strong> and model evaluation, in Python with scikit-learn.</p>
+      <div class="tags"><span class="tag" style="--tc:#fbbf24">scikit-learn</span><span class="tag" style="--tc:#f472b6">pandas</span><span class="tag" style="--tc:#22d3ee">matplotlib</span><span class="tag" style="--tc:#a78bfa">cross-validation</span><span class="tag" style="--tc:#34d399">fairness</span></div>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://github.com/Otodji/TP_Machine_Learning" target="_blank" rel="noopener">View the notebook on GitHub ↗</a>
+      </div>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><span>Scope</span><b>11 chapters · 48 figures</b></div>
+      <div class="fact"><span>Data</span><b>SAheart · Adult census</b></div>
+      <div class="fact"><span>Stack</span><b>Python · scikit-learn</b></div>
+      <div class="fact"><span>Reproducible</span><b>Fixed seed · requirements</b></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#fbbf24">Key results</span>
+    <h2>What the experiments show</h2>
+    <div class="results">
+      <div class="result gcard" style="--c1:#f59e0b; --c2:#ec4899"><b class="grad-text">+3.4 pts</b><span>Balanced accuracy of k-NN on SAheart after standardising the features: <strong>0.599 → 0.633</strong> (5-fold stratified CV).</span></div>
+      <div class="result gcard" style="--c1:#22d3ee; --c2:#8b5cf6"><b style="color:#22d3ee">k* = 21</b><span>Number of neighbours chosen by cross-validation, balancing variance (small k) against bias (large k).</span></div>
+      <div class="result gcard" style="--c1:#ec4899; --c2:#f59e0b"><b style="color:#f472b6">22.8% vs 6.8%</b><span>Selection rate of a random forest on Adult for men vs women: the model <strong>amplifies</strong> the gap already present in the data.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">The data</span>
+    <h2>Two real-world classification problems</h2>
+    <div class="features">
+      <div class="feature gcard" style="--c1:#22d3ee; --c2:#3b82f6"><div class="ic">❤️</div><h3>SAheart · 462 × 10</h3><p>Coronary heart disease among men in a high-risk region of the Western Cape, South Africa. Target: <code>chd</code>.</p></div>
+      <div class="feature gcard" style="--c1:#f59e0b; --c2:#ec4899"><div class="ic">💼</div><h3>Adult · 10,000 × 13</h3><p>Extract of the 1994 US census (UCI). Target: income above $50k, used for trees, ensembles and fairness.</p></div>
+      <div class="feature gcard" style="--c1:#8b5cf6; --c2:#22d3ee"><div class="ic">🧪</div><h3>Synthetic data</h3><p>Controlled simulations to illustrate overfitting, bias-variance and the curse of dimensionality.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#a78bfa">Highlights</span>
+    <h2>Selected figures</h2>
+    <div class="figs">
+      <figure class="fig gcard wide" style="--c1:#f59e0b; --c2:#8b5cf6">
+        <div class="img"><img src="../assets/img/ml/decision-boundaries.png" alt="Decision boundaries of naive Bayes, LDA and QDA on age and tobacco" loading="lazy"></div>
+        <figcaption><b>Decision boundaries on SAheart (age × tobacco).</b> Naive Bayes, LDA and QDA draw different frontiers between healthy and sick patients; LDA reaches the lowest training error (29.2%).</figcaption>
+      </figure>
+      <figure class="fig gcard" style="--c1:#22d3ee; --c2:#8b5cf6">
+        <div class="img"><img src="../assets/img/ml/choose-k.png" alt="Training and cross-validation error as a function of k" loading="lazy"></div>
+        <figcaption><b>Choosing k for k-NN.</b> Few neighbours mean high variance, many neighbours mean high bias; cross-validation picks k* = 21.</figcaption>
+      </figure>
+      <figure class="fig gcard" style="--c1:#ec4899; --c2:#f59e0b">
+        <div class="img"><img src="../assets/img/ml/fairness.png" alt="Random forest metrics by sex on the Adult dataset" loading="lazy"></div>
+        <figcaption><b>Algorithmic fairness.</b> Base rate, selection rate, TPR, FPR and precision by sex for a random forest on Adult.</figcaption>
+      </figure>
+      <figure class="fig gcard wide" style="--c1:#8b5cf6; --c2:#ec4899">
+        <div class="img"><img src="../assets/img/ml/roc-vs-pr.png" alt="ROC and precision-recall curves with balanced and imbalanced classes" loading="lazy"></div>
+        <figcaption><b>ROC vs precision-recall.</b> With 2% positives, the ROC AUC barely moves (0.962 → 0.957) while average precision collapses (0.935 → 0.557): on imbalanced data, precision-recall tells the real story.</figcaption>
+      </figure>
+      <figure class="fig gcard" style="--c1:#10b981; --c2:#22d3ee">
+        <div class="img"><img src="../assets/img/ml/bias-variance.png" alt="Bias-variance decomposition for polynomial fits of degree 1, 3 and 15" loading="lazy"></div>
+        <figcaption><b>Bias-variance trade-off.</b> Degree 1 underfits, degree 15 explodes in variance, degree 3 gets it right.</figcaption>
+      </figure>
+      <figure class="fig gcard" style="--c1:#3b82f6; --c2:#f59e0b">
+        <div class="img"><img src="../assets/img/ml/tree-adult.png" alt="Depth-3 decision tree on the Adult dataset" loading="lazy"></div>
+        <figcaption><b>Interpretable CART tree on Adult.</b> A depth-3 tree with 8 leaves: relationship status and capital gain drive income.</figcaption>
+      </figure>
+    </div>
+    <p class="note">Figures are taken from the original notebook, whose labels are in French.</p>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#10b981">Curriculum</span>
+    <h2>What the study covers</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Chapter</th><th>Concepts</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Bayes rule & asymmetric costs</td><td>Bayes classifier, decision threshold when errors have different costs</td></tr>
+          <tr><td>2</td><td>Overfitting & bias-variance</td><td>U-shaped error curve, bias-variance decomposition</td></tr>
+          <tr><td>3</td><td>Data splitting & cross-validation</td><td>Train / validation / test, k-fold, curse of dimensionality, naive Bayes</td></tr>
+          <tr><td>4–5</td><td>Discriminant analysis</td><td>Multivariate normal, Mahalanobis distance, LDA vs QDA</td></tr>
+          <tr><td>6</td><td>Local methods</td><td>Parzen windows, k-NN, standardisation, effect of noise variables</td></tr>
+          <tr><td>7</td><td>Decision trees (CART)</td><td>Gini & entropy, recursive partitioning, cost-complexity pruning, instability</td></tr>
+          <tr><td>8</td><td>Ensembles</td><td>Bagging, out-of-bag error, random forests (<code>mtry</code>), boosting</td></tr>
+          <tr><td>9</td><td>Algorithmic fairness</td><td>Group metrics, fairness-accuracy trade-off, impossibility theorem</td></tr>
+          <tr><td>10–11</td><td>Validation & evaluation</td><td>Temporal splits, confusion matrix, threshold metrics, ROC and precision-recall</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">Code</span>
+    <h2>A taste of the pipeline</h2>
+<pre class="code" data-lang="Python"><span class="k">from</span> sklearn.model_selection <span class="k">import</span> StratifiedKFold, cross_val_score
+<span class="k">from</span> sklearn.neighbors <span class="k">import</span> KNeighborsClassifier
+<span class="k">from</span> sklearn.pipeline <span class="k">import</span> make_pipeline
+<span class="k">from</span> sklearn.preprocessing <span class="k">import</span> StandardScaler
+
+X, y <span class="o">=</span> utils.<span class="f">saheart_xy</span>()
+cv <span class="o">=</span> <span class="f">StratifiedKFold</span>(n_splits<span class="o">=</span><span class="n">5</span>, shuffle<span class="o">=</span><span class="k">True</span>, random_state<span class="o">=</span><span class="n">42</span>)
+
+raw    <span class="o">=</span> <span class="f">KNeighborsClassifier</span>(n_neighbors<span class="o">=</span><span class="n">15</span>)
+scaled <span class="o">=</span> <span class="f">make_pipeline</span>(<span class="f">StandardScaler</span>(), <span class="f">KNeighborsClassifier</span>(n_neighbors<span class="o">=</span><span class="n">15</span>))
+
+<span class="k">for</span> name, model <span class="k">in</span> [(<span class="s">"raw"</span>, raw), (<span class="s">"standardised"</span>, scaled)]:
+    s <span class="o">=</span> <span class="f">cross_val_score</span>(model, X, y, cv<span class="o">=</span>cv, scoring<span class="o">=</span><span class="s">"balanced_accuracy"</span>)
+    <span class="f">print</span>(name, <span class="f">round</span>(s.<span class="f">mean</span>(), <span class="n">3</span>))   <span class="c"># raw 0.599 · standardised 0.633</span></pre>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap next-proj reveal">
+    <a class="gcard" href="ntlkwiex.html" style="--c1:#22d3ee; --c2:#3b82f6"><span>← Previous project</span><b>NTLKwIEx</b></a>
+    <a class="gcard r" href="deep-learning.html" style="--c1:#ec4899; --c2:#8b5cf6"><span>Next project →</span><b>Deep Learning Toolbox</b></a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© <span class="year-now">2026</span> Théophile Otodji</span><span><a href="../index.html">Home</a> · <a href="https://github.com/Otodji" target="_blank" rel="noopener">GitHub</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

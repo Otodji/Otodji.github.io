@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monte-Carlo · Burr-PTLEN · Théophile Otodji</title>
+<meta name="description" content="Monte-Carlo simulation, maximum-likelihood estimation and goodness-of-fit testing with parametric bootstrap for the 7-parameter Burr-PTLEN distribution, ported from R to Python.">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="Monte-Carlo · Burr-PTLEN · Théophile Otodji">
+<meta property="og:image" content="https://otodji.github.io/assets/img/og-image.jpg">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"><div class="grid"></div><div class="blob b1" style="background:#059669"></div><div class="blob b2" style="background:#0891b2"></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="logo-mark">TO</span>Théophile Otodji</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#publications">Publications</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../index.html#contact">Let's talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="crumb" href="../index.html#projects">← All projects</a>
+    <div class="reveal">
+      <span class="kicker" style="--k:#34d399">Computational statistics · R → Python</span>
+      <h1>Monte-Carlo study of the <span class="grad-text">Burr-PTLEN</span> distribution</h1>
+      <p class="summary">Simulation, maximum-likelihood estimation and goodness-of-fit testing for a seven-parameter
+        distribution. I ported an R workflow to Python and made it <strong>exact, numerically stable and statistically honest</strong>.</p>
+      <div class="tags"><span class="tag" style="--tc:#34d399">NumPy</span><span class="tag" style="--tc:#22d3ee">SciPy</span><span class="tag" style="--tc:#a78bfa">L-BFGS-B</span><span class="tag" style="--tc:#fbbf24">KS · CvM · AD</span><span class="tag" style="--tc:#f472b6">parametric bootstrap</span></div>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://github.com/Otodji/Simulation_Monte_Carlo_PTLENKies" target="_blank" rel="noopener">View the notebook on GitHub ↗</a>
+        <a class="btn" href="ptlenkies.html">The R package: PTLENKies →</a>
+      </div>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><span>Parameters</span><b>7 estimated jointly</b></div>
+      <div class="fact"><span>Sample</span><b>250 simulated draws</b></div>
+      <div class="fact"><span>Tests</span><b>KS · Cramér-von Mises · AD</b></div>
+      <div class="fact"><span>Stack</span><b>Python · NumPy · SciPy</b></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#34d399">Contributions</span>
+    <h2>Beyond a line-by-line translation</h2>
+    <div class="features">
+      <div class="feature gcard" style="--c1:#10b981; --c2:#22d3ee"><div class="ic">🎯</div><h3>Closed-form quantile</h3><p>I derived the exact inverse of \(F\), replacing a bisection search: instant, exact, and used to validate the original method.</p></div>
+      <div class="feature gcard" style="--c1:#22d3ee; --c2:#8b5cf6"><div class="ic">🧮</div><h3>Stable log-likelihood</h3><p>The log-density is computed term by term with <code>log1p</code> / <code>expm1</code>, so the likelihood stays finite in the tails.</p></div>
+      <div class="feature gcard" style="--c1:#8b5cf6; --c2:#ec4899"><div class="ic">📏</div><h3>Standard errors</h3><p>Uncertainty from the inverse Hessian of the negative log-likelihood, the Python equivalent of R's <code>vcov()</code>.</p></div>
+      <div class="feature gcard" style="--c1:#ec4899; --c2:#f59e0b"><div class="ic">🧪</div><h3>Three GoF tests</h3><p>Kolmogorov-Smirnov, Cramér-von Mises and Anderson-Darling, each sensitive to a different kind of misfit.</p></div>
+      <div class="feature gcard" style="--c1:#f59e0b; --c2:#10b981"><div class="ic">🔁</div><h3>Parametric bootstrap</h3><p>Corrected p-values: simulate from the fitted law, re-estimate, recompute the statistics.</p></div>
+      <div class="feature gcard" style="--c1:#3b82f6; --c2:#22d3ee"><div class="ic">✅</div><h3>Built-in checks</h3><p>The density integrates to 1 and matches the derivative of \(F\); simulated histograms match the theory.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">Key derivation</span>
+    <h2>Inverting the distribution exactly</h2>
+    <p>Writing \(v = e^{u} \in (0, 1]\), the distribution function becomes \(F = \big(v(2 - v)\big)^m\), which inverts in closed form:</p>
+    <div class="math" style="--c1:#10b981">
+      $$v = 1 - \sqrt{1 - U^{1/m}}, \quad K = \Big(1 - \frac{\ln v}{n}\Big)^{-1/p}, \quad G = \Big(\frac{-\ln(1 - K)}{\lambda}\Big)^{1/\beta}, \quad x = \Big((1 + G)^{1/k} - 1\Big)^{1/c}$$
+    </div>
+    <p>If \(U \sim \mathcal{U}(0,1)\), then \(x = F^{-1}(U)\) follows the Burr-PTLEN distribution. This is the formula that powers the simulation below.</p>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#f59e0b">Try it</span>
+    <h2>Run the Monte-Carlo simulation</h2>
+    <p>Press <strong>Simulate</strong> to draw 250 observations with the closed-form quantile, exactly as in the notebook, whose true parameters are the defaults below.
+      The histogram should follow the theoretical density: that is the visual check that the inversion is correct.</p>
+    <div class="explorer gcard" id="ex-mc" style="--c1:#10b981; --c2:#22d3ee; margin-top: 22px">
+      <div class="controls"><h3>Parameters</h3></div>
+      <div class="plot">
+        <div class="legend"><span><i style="background:#34d399"></i>theoretical density</span><span><i style="background:#22d3ee"></i>CDF / simulated histogram</span><span><i style="background:#f59e0b"></i>median</span><span><i style="background:#10b981"></i>mode</span></div>
+        <div class="readout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#ec4899">Statistical rigour</span>
+    <h2>Lessons from the study</h2>
+    <div class="results">
+      <div class="result gcard" style="--c1:#10b981; --c2:#22d3ee"><b style="color:#34d399">Validated</b><span>Simulated histograms match the theoretical density, and bisection agrees with the exact quantile.</span></div>
+      <div class="result gcard" style="--c1:#f59e0b; --c2:#ec4899"><b style="color:#fbbf24">Identifiability</b><span>With 7 parameters and 250 points, different parameter sets give nearly identical curves: estimates can drift while the fit stays excellent.</span></div>
+      <div class="result gcard" style="--c1:#8b5cf6; --c2:#ec4899"><b style="color:#a78bfa">Honest p-values</b><span>Testing on the data used for fitting makes classical p-values too large. The parametric bootstrap gives the p-values to trust.</span></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>R</th><th>Python</th></tr></thead>
+        <tbody>
+          <tr><td><code>stats4::mle</code> (L-BFGS-B)</td><td><code>scipy.optimize.minimize(method="L-BFGS-B")</code></td></tr>
+          <tr><td><code>runif</code>, <code>set.seed</code></td><td><code>numpy.random.default_rng(123).uniform</code></td></tr>
+          <tr><td><code>tibble</code>, <code>dplyr</code>, <code>ggplot2</code></td><td><code>numpy</code>, <code>matplotlib</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap next-proj reveal">
+    <a class="gcard" href="deep-learning.html" style="--c1:#ec4899; --c2:#8b5cf6"><span>← Previous project</span><b>Deep Learning Toolbox</b></a>
+    <a class="gcard r" href="ptlenkies.html" style="--c1:#8b5cf6; --c2:#ec4899"><span>Back to the start →</span><b>PTLENKies</b></a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© <span class="year-now">2026</span> Théophile Otodji</span><span><a href="../index.html">Home</a> · <a href="https://github.com/Otodji" target="_blank" rel="noopener">GitHub</a></span></div></footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/explorer.js"></script>
+<script>
+  const cdf = (x, q) => {
+    const A = Math.pow(1 + Math.pow(x, q.c), -q.k), G = (1 - A) / A;
+    const K = -Math.expm1(-q.lambda * Math.pow(G, q.beta));
+    const u = q.n * (1 - Math.pow(K, -q.p));
+    return Math.exp(q.m * u) * Math.pow(2 - Math.exp(u), q.m);
+  };
+  const quantile = (U, q) => {
+    const v = 1 - Math.sqrt(1 - Math.pow(U, 1 / q.m));
+    const K = Math.pow(1 - Math.log(v) / q.n, -1 / q.p);
+    const G = Math.pow(-Math.log1p(-K) / q.lambda, 1 / q.beta);
+    return Math.pow(Math.pow(1 + G, 1 / q.k) - 1, 1 / q.c);
+  };
+  Explorer(document.getElementById("ex-mc"), {
+    cdf, quantile, color: "#34d399", color2: "#22d3ee", simulate: { n: 250 },
+    params: [
+      { key: "m", label: "m", min: 0.2, max: 5, step: 0.1, value: 2 },
+      { key: "n", label: "n", min: 0.2, max: 5, step: 0.1, value: 1.4 },
+      { key: "p", label: "p", min: 0.2, max: 5, step: 0.1, value: 3.1 },
+      { key: "lambda", label: "λ (lambda)", min: 0.1, max: 5, step: 0.1, value: 0.5 },
+      { key: "beta", label: "β (beta)", min: 0.2, max: 5, step: 0.1, value: 1.5 },
+      { key: "c", label: "c", min: 0.5, max: 6, step: 0.1, value: 3 },
+      { key: "k", label: "k", min: 0.2, max: 5, step: 0.1, value: 1 }
+    ]
+  });
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]})"></script>
+</body>
+</html>

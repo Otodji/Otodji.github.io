@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Learning Toolbox · Théophile Otodji</title>
+<meta name="description" content="Computational graphs and backpropagation implemented side by side in NumPy, PyTorch, TensorFlow 1.x/2.x and Keras, up to a full FashionMNIST classifier.">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="Deep Learning Toolbox · Théophile Otodji">
+<meta property="og:image" content="https://otodji.github.io/assets/img/og-image.jpg">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"><div class="grid"></div><div class="blob b1" style="background:#db2777"></div><div class="blob b2" style="background:#7c3aed"></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="logo-mark">TO</span>Théophile Otodji</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#publications">Publications</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../index.html#contact">Let's talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="crumb" href="../index.html#projects">← All projects</a>
+    <div class="reveal">
+      <span class="kicker" style="--k:#f472b6">Deep learning · MSc Data Science, Université Paris-Saclay</span>
+      <h1>Deep Learning <span class="grad-text">Toolbox</span></h1>
+      <p class="summary">One problem, five implementations. I rebuilt the same computational graphs and neural networks in
+        <strong>NumPy, PyTorch, TensorFlow 1.x, TensorFlow 2.x and Keras</strong> to understand what each framework
+        automates, and why.</p>
+      <div class="tags"><span class="tag" style="--tc:#f472b6">PyTorch</span><span class="tag" style="--tc:#fbbf24">TensorFlow</span><span class="tag" style="--tc:#a78bfa">Keras</span><span class="tag" style="--tc:#22d3ee">autograd</span><span class="tag" style="--tc:#34d399">TensorBoard</span></div>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://github.com/Otodji/tp-deep-learning" target="_blank" rel="noopener">View the notebook on GitHub ↗</a>
+      </div>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><span>Scope</span><b>7 parts · 70 cells</b></div>
+      <div class="fact"><span>Dataset</span><b>FashionMNIST · 70k images</b></div>
+      <div class="fact"><span>Frameworks</span><b>5 compared</b></div>
+      <div class="fact"><span>Hardware</span><b>CPU or CUDA GPU</b></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#ec4899">Starting point</span>
+    <h2>One computational graph</h2>
+    <p>Everything starts from a tiny graph on \(N \times D\) matrices, differentiated by hand and then automatically:</p>
+    <div class="math" style="--c1:#ec4899">
+      $$a = x \odot y, \qquad b = a + z, \qquad c = \sum_{i,j} b_{ij}
+      \qquad\Longrightarrow\qquad \frac{\partial c}{\partial x} = y, \quad \frac{\partial c}{\partial y} = x, \quad \frac{\partial c}{\partial z} = \mathbf{1}$$
+    </div>
+    <p>The same idea then scales up to a two-layer network, custom autograd functions, and a full image classifier.</p>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#a78bfa">Journey</span>
+    <h2>What I built</h2>
+    <div class="features">
+      <div class="feature gcard" style="--c1:#ec4899; --c2:#8b5cf6"><div class="ic">🔁</div><h3>Graphs & gradients</h3><p>Manual backpropagation in NumPy, then automatic gradients in TensorFlow and PyTorch, on CPU and GPU.</p></div>
+      <div class="feature gcard" style="--c1:#8b5cf6; --c2:#22d3ee"><div class="ic">🔥</div><h3>PyTorch in depth</h3><p>Tensors, <code>autograd</code>, a custom ReLU autograd function, <code>nn</code>, Adam, custom <code>nn.Module</code> blocks.</p></div>
+      <div class="feature gcard" style="--c1:#22d3ee; --c2:#10b981"><div class="ic">👕</div><h3>FashionMNIST classifier</h3><p>Data loading, model, training and test loops over epochs, then saving, reloading and predicting.</p></div>
+      <div class="feature gcard" style="--c1:#f59e0b; --c2:#ec4899"><div class="ic">🧱</div><h3>Pretrained models</h3><p>ImageNet networks from <code>torchvision.models</code>, updated to the modern <code>weights=</code> API.</p></div>
+      <div class="feature gcard" style="--c1:#10b981; --c2:#3b82f6"><div class="ic">📈</div><h3>TensorFlow & TensorBoard</h3><p>From TF 1.x sessions to TF 2.x eager mode and <code>GradientTape</code>, with training logs in TensorBoard.</p></div>
+      <div class="feature gcard" style="--c1:#3b82f6; --c2:#8b5cf6"><div class="ic">🧩</div><h3>TF 1.x step by step</h3><p>Placeholders, Variables, update nodes, optimizers, built-in losses, dense layers and Xavier initialisation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">Takeaway</span>
+    <h2>Frameworks side by side</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>NumPy</th><th>TensorFlow 1.x</th><th>TensorFlow 2.x / Keras</th><th>PyTorch</th></tr></thead>
+        <tbody>
+          <tr><td>Graph</td><td>none</td><td>static: built, then run in a <code>Session</code></td><td>dynamic (eager)</td><td>dynamic, built on the fly</td></tr>
+          <tr><td>Gradients</td><td>by hand</td><td><code>tf.gradients</code> / <code>minimize</code></td><td><code>GradientTape</code> / <code>fit</code></td><td><code>loss.backward()</code></td></tr>
+          <tr><td>Weights</td><td>NumPy arrays</td><td><code>Variable</code> + <code>assign</code></td><td><code>tf.Variable</code>, <code>Dense</code></td><td><code>requires_grad</code>, <code>nn.Linear</code></td></tr>
+          <tr><td>Update</td><td>by hand</td><td><code>updates</code> node in <code>sess.run</code></td><td><code>apply_gradients</code> / <code>fit</code></td><td><code>optimizer.step()</code></td></tr>
+          <tr><td>GPU</td><td>no</td><td><code>tf.device('/gpu:0')</code></td><td>automatic</td><td><code>.to(device)</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px"><strong>Key insight:</strong> frameworks build the computational graph and automate backpropagation, so you only
+      describe the forward pass. Predefined layers, losses and optimizers then make models short and readable.</p>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#f59e0b">Code</span>
+    <h2>The PyTorch training step</h2>
+<pre class="code" data-lang="Python"><span class="k">import</span> torch
+
+model <span class="o">=</span> torch.nn.<span class="f">Sequential</span>(
+    torch.nn.<span class="f">Linear</span>(D_in, H),
+    torch.nn.<span class="f">ReLU</span>(),
+    torch.nn.<span class="f">Linear</span>(H, D_out),
+)
+optimizer <span class="o">=</span> torch.optim.<span class="f">Adam</span>(model.<span class="f">parameters</span>(), lr<span class="o">=</span><span class="n">1e-4</span>)
+
+<span class="k">for</span> t <span class="k">in</span> <span class="f">range</span>(<span class="n">500</span>):
+    y_pred <span class="o">=</span> <span class="f">model</span>(x)                                   <span class="c"># forward pass builds the graph</span>
+    loss <span class="o">=</span> torch.nn.functional.<span class="f">mse_loss</span>(y_pred, y)
+    optimizer.<span class="f">zero_grad</span>()
+    loss.<span class="f">backward</span>()                                     <span class="c"># autograd computes every gradient</span>
+    optimizer.<span class="f">step</span>()                                    <span class="c"># one gradient-descent update</span></pre>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap next-proj reveal">
+    <a class="gcard" href="machine-learning.html" style="--c1:#f59e0b; --c2:#ec4899"><span>← Previous project</span><b>Supervised Machine Learning</b></a>
+    <a class="gcard r" href="monte-carlo-burr.html" style="--c1:#10b981; --c2:#22d3ee"><span>Next project →</span><b>Monte-Carlo · Burr-PTLEN</b></a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© <span class="year-now">2026</span> Théophile Otodji</span><span><a href="../index.html">Home</a> · <a href="https://github.com/Otodji" target="_blank" rel="noopener">GitHub</a></span></div></footer>
+<script src="../assets/js/main.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]})"></script>
+</body>
+</html>

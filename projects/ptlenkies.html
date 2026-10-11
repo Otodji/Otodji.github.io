@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PTLENKies · Théophile Otodji</title>
+<meta name="description" content="PTLENKies: an R package on CRAN for the 7-parameter Power Topp Leone Exponential Negative Kies Burr distribution. Density, quantiles, simulation and maximum-likelihood estimation.">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="PTLENKies · R package by Théophile Otodji">
+<meta property="og:image" content="https://otodji.github.io/assets/img/og-image.jpg">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"><div class="grid"></div><div class="blob b1" style="background:#7c3aed"></div><div class="blob b2" style="background:#db2777"></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="logo-mark">TO</span>Théophile Otodji</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#publications">Publications</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li class="nav-cta"><a class="btn btn-primary btn-sm" href="../index.html#contact">Let's talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="crumb" href="../index.html#projects">← All projects</a>
+    <div class="reveal">
+      <span class="kicker" style="--k:#a78bfa">R package · published on CRAN</span>
+      <h1><span class="grad-text">PTLENKies</span></h1>
+      <p class="summary">Statistical tools for the <strong>Power Topp Leone Exponential Negative Kies Burr</strong>
+        (PTLENKBurr) distribution: a flexible seven-parameter model for positive data, built on a Burr XII baseline.</p>
+      <div class="tags"><span class="tag" style="--tc:#a78bfa">distribution theory</span><span class="tag" style="--tc:#f472b6">maximum likelihood</span><span class="tag" style="--tc:#22d3ee">simulation</span><span class="tag" style="--tc:#fbbf24">reliability</span><span class="tag" style="--tc:#34d399">testthat</span></div>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://CRAN.R-project.org/package=PTLENKies" target="_blank" rel="noopener">View on CRAN ↗</a>
+        <a class="btn" href="https://github.com/Otodji/PTLENKies" target="_blank" rel="noopener">Source code on GitHub ↗</a>
+        <a class="btn" href="https://doi.org/10.1515/phys-2023-0151" target="_blank" rel="noopener">Read the paper ↗</a>
+      </div>
+    </div>
+    <div class="facts reveal">
+      <div class="fact"><span>Role</span><b>Author & maintainer</b></div>
+      <div class="fact"><span>Released</span><b>CRAN · Sept 2026</b></div>
+      <div class="fact"><span>Stack</span><b>R ≥ 4.1 · base stats</b></div>
+      <div class="fact"><span>Recognition</span><b>🏆 UNSTIM award</b></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">The problem</span>
+    <h2>Why a new distribution?</h2>
+    <div class="prose">
+      <p>Classical models such as the Weibull or Burr XII distributions often struggle to capture the shapes found in
+        real engineering and biological data: strong skewness, sharp peaks or heavy tails. The
+        <strong>PTLEN family</strong>, introduced in <em>Open Physics</em> (2023), adds shape parameters on top of a baseline
+        distribution to gain this flexibility while keeping a closed-form distribution function.</p>
+      <p>PTLENKies turns this research into a <strong>ready-to-use R package</strong>, so any statistician can evaluate,
+        simulate and fit the distribution in a few lines of code, without rewriting the maths.</p>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#ec4899">The model</span>
+    <h2>Distribution function</h2>
+    <p>For \(x > 0\) and \(m, n, p, \lambda, \beta, c, k > 0\):</p>
+    <div class="math" style="--c1:#8b5cf6">
+      $$F(x) = \exp\!\Big( m\,n \big(1 - K(x)^{-p}\big) \Big)\Big[\, 2 - \exp\!\Big( n \big(1 - K(x)^{-p}\big) \Big) \Big]^{m}$$
+      $$K(x) = 1 - \exp\!\left( -\lambda \left( \frac{1 - (1+x^{c})^{-k}}{(1+x^{c})^{-k}} \right)^{\beta} \right)$$
+    </div>
+    <p>The parameters \(c\) and \(k\) come from the Burr XII baseline; \(m, n, p, \lambda, \beta\) control the shape.</p>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#f59e0b">Try it</span>
+    <h2>Interactive density explorer</h2>
+    <p>Move the sliders to see how each parameter reshapes the distribution. The curves are computed live in your
+      browser from the formula above. Press <strong>Simulate</strong> to draw a random sample by inverse-transform sampling.</p>
+    <div class="explorer gcard" id="ex-ptlen" style="--c1:#8b5cf6; --c2:#ec4899; margin-top: 22px">
+      <div class="controls"><h3>Parameters</h3></div>
+      <div class="plot">
+        <div class="legend"><span><i style="background:#a78bfa"></i>density f(x)</span><span><i style="background:#ec4899"></i>CDF F(x), right axis</span><span><i style="background:#f59e0b"></i>median</span><span><i style="background:#10b981"></i>mode</span></div>
+        <div class="readout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#10b981">What's inside</span>
+    <h2>Package API</h2>
+    <div class="features" style="margin-bottom: 26px">
+      <div class="feature gcard" style="--c1:#8b5cf6; --c2:#ec4899"><div class="ic">📐</div><h3>Exact functions</h3><p>Density, distribution function and quantiles, vectorised over <code>x</code>.</p></div>
+      <div class="feature gcard" style="--c1:#22d3ee; --c2:#3b82f6"><div class="ic">🎲</div><h3>Simulation</h3><p>Random samples of any size by inverting the distribution function.</p></div>
+      <div class="feature gcard" style="--c1:#f59e0b; --c2:#10b981"><div class="ic">🎯</div><h3>Estimation</h3><p>Maximum-likelihood fit of all seven parameters with <code>nlminb</code>.</p></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Function</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>P_PTLENKBurr(x, m, n, p, lambda, beta, c, k)</code></td><td>Probability density function</td></tr>
+          <tr><td><code>C_PTLENKBurr(x, m, n, p, lambda, beta, c, k)</code></td><td>Cumulative distribution function</td></tr>
+          <tr><td><code>Q_PTLENKBurr(u, m, n, p, lambda, beta, c, k)</code></td><td>Quantiles for a vector of probabilities <code>u</code></td></tr>
+          <tr><td><code>R_PTLENKBurr(n_samples, ...)</code></td><td>Random sample of size <code>n_samples</code></td></tr>
+          <tr><td><code>E_PTLENKBurr(data)</code></td><td>Maximum-likelihood estimation of the seven parameters</td></tr>
+          <tr><td><code>Sim_PTLENKBurr(data)</code></td><td>Histogram of the data with the fitted density overlaid</td></tr>
+          <tr><td><code>Plot_PPTLENKBurr(...)</code> / <code>Plot_CPTLENKBurr(...)</code></td><td>Density (with mode and median) and distribution function plots</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The package ships the <code>GlassFibers</code> dataset: breaking strengths of 1.5 cm glass fibres measured at the UK National Physical Laboratory.</p>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#22d3ee">Quick start</span>
+    <h2>Three lines to fit real data</h2>
+<pre class="code" data-lang="R"><span class="f">install.packages</span>(<span class="s">"PTLENKies"</span>)
+<span class="k">library</span>(PTLENKies)
+
+<span class="c"># Density and cumulative probabilities</span>
+x <span class="o">&lt;-</span> <span class="f">c</span>(<span class="n">0.5</span>, <span class="n">1.0</span>, <span class="n">1.5</span>)
+<span class="f">P_PTLENKBurr</span>(x, m = <span class="n">1</span>, n = <span class="n">1</span>, p = <span class="n">1</span>, lambda = <span class="n">0.5</span>, beta = <span class="n">1.5</span>, c = <span class="n">2</span>, k = <span class="n">1</span>)
+
+<span class="c"># Fit the seven parameters to the glass-fibre data and plot the fit</span>
+<span class="f">data</span>(GlassFibers)
+fit <span class="o">&lt;-</span> <span class="f">E_PTLENKBurr</span>(GlassFibers)
+<span class="f">Sim_PTLENKBurr</span>(GlassFibers)</pre>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap reveal">
+    <span class="kicker" style="--k:#f59e0b">Impact</span>
+    <h2>Research & recognition</h2>
+    <div class="results">
+      <div class="result gcard" style="--c1:#f59e0b; --c2:#ec4899"><b class="grad-text">🏆</b><span><strong>Best Technological Innovation Award</strong> (UNSTIM, Benin) for engineering and biotechnology.</span></div>
+      <div class="result gcard" style="--c1:#8b5cf6; --c2:#22d3ee"><b style="color:#a78bfa">Open Physics</b><span>The PTLEN family of distributions, with applications to engineering and biological data (2023).</span></div>
+      <div class="result gcard" style="--c1:#22d3ee; --c2:#10b981"><b style="color:#22d3ee">Python port</b><span>A companion Monte-Carlo study re-implements and tests the model in Python. <a href="monte-carlo-burr.html" style="color:#22d3ee">See the project →</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="wrap next-proj reveal">
+    <a class="gcard" href="../index.html#projects" style="--c1:#8b5cf6; --c2:#22d3ee"><span>← Back</span><b>All projects</b></a>
+    <a class="gcard r" href="ntlkwiex.html" style="--c1:#22d3ee; --c2:#3b82f6"><span>Next project →</span><b>NTLKwIEx</b></a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© <span class="year-now">2026</span> Théophile Otodji</span><span><a href="../index.html">Home</a> · <a href="https://github.com/Otodji" target="_blank" rel="noopener">GitHub</a></span></div></footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/explorer.js"></script>
+<script>
+  // PTLENKBurr: closed-form CDF and quantile (see the Monte-Carlo project for the derivation)
+  const cdf = (x, q) => {
+    const A = Math.pow(1 + Math.pow(x, q.c), -q.k), G = (1 - A) / A;
+    const K = -Math.expm1(-q.lambda * Math.pow(G, q.beta));
+    const u = q.n * (1 - Math.pow(K, -q.p));
+    return Math.exp(q.m * u) * Math.pow(2 - Math.exp(u), q.m);
+  };
+  const quantile = (U, q) => {
+    const v = 1 - Math.sqrt(1 - Math.pow(U, 1 / q.m));
+    const K = Math.pow(1 - Math.log(v) / q.n, -1 / q.p);
+    const G = Math.pow(-Math.log1p(-K) / q.lambda, 1 / q.beta);
+    return Math.pow(Math.pow(1 + G, 1 / q.k) - 1, 1 / q.c);
+  };
+  Explorer(document.getElementById("ex-ptlen"), {
+    cdf, quantile, color: "#a78bfa", color2: "#ec4899", simulate: { n: 500 },
+    params: [
+      { key: "m", label: "m", min: 0.2, max: 5, step: 0.1, value: 1 },
+      { key: "n", label: "n", min: 0.2, max: 5, step: 0.1, value: 1 },
+      { key: "p", label: "p", min: 0.2, max: 5, step: 0.1, value: 1 },
+      { key: "lambda", label: "λ (lambda)", min: 0.1, max: 5, step: 0.1, value: 0.5 },
+      { key: "beta", label: "β (beta)", min: 0.2, max: 5, step: 0.1, value: 1.5 },
+      { key: "c", label: "c (Burr XII)", min: 0.5, max: 6, step: 0.1, value: 2 },
+      { key: "k", label: "k (Burr XII)", min: 0.2, max: 5, step: 0.1, value: 1 }
+    ]
+  });
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]})"></script>
+</body>
+</html>
